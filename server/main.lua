@@ -55,6 +55,8 @@ AddEventHandler('esx_holdup:rob', function(robb)
 
 
 		if rob == false then
+                local coords = vector2(Stores[robb].position["x"], Stores[robb].position["y"])
+                TriggerEvent('emergencydispatch:emergencycall:new', "police", "Ladenraub (automatischer Notruf)", coords, true)
 
 			if(cops > 0)then
 
